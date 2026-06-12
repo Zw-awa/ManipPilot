@@ -1,0 +1,52 @@
+name: Feature Request / 功能建议
+description: Propose a user-facing capability or workflow improvement for ManipPilot. / 提出面向用户的能力或工作流改进建议。
+title: "[Feature]: "
+labels:
+  - enhancement
+  - triage
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Target area / 目标范围
+      description: Which area would this change affect most? / 这项改动主要影响哪个部分？
+      options:
+        - Installation / Setup (安装 / 环境准备)
+        - Task Definition (任务定义)
+        - Task Execution (任务执行)
+        - Replay / Review (回放 / 复盘)
+        - Recovery Behavior (恢复行为)
+        - ROS 2 Integration (ROS 2 集成)
+        - Documentation (文档)
+        - Repository Tooling (仓库工具)
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal / 目标
+      description: What do you want to add or improve? / 你想新增或改进什么？
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why it matters / 为什么值得做
+      description: Why is this improvement useful for the project? / 为什么这个改动对项目有价值？
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed approach / 建议方案
+      description: If you already have an idea, describe the approach briefly. / 如果你已经有思路，可以在这里简单说明。
+  - type: textarea
+    id: workflow
+    attributes:
+      label: User workflow / 用户工作流
+      description: Describe the user workflow you want to improve. / 请描述你希望改进的用户工作流。
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered / 备选方案或权衡
+      description: Mention any alternatives or tradeoffs if relevant. / 如果有备选方案或取舍，也可以写在这里。

@@ -1,0 +1,40 @@
+name: Question / Support / 提问与帮助
+description: Ask for help with public usage, workflow fit, or contribution direction. / 询问公开使用方式、工作流适配或贡献方向。
+title: "[Question]: "
+labels:
+  - question
+  - support
+body:
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic / 主题
+      description: What kind of help do you need? / 你需要哪一类帮助？
+      options:
+        - Installation / Setup (安装 / 环境准备)
+        - Task Definition (任务定义)
+        - Task Execution (任务执行)
+        - Replay / Review (回放 / 复盘)
+        - Recovery Behavior (恢复行为)
+        - ROS 2 Integration (ROS 2 集成)
+        - Documentation (文档)
+        - Repository Tooling (仓库工具)
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question / 你的问题
+      description: Describe what you are trying to understand or do. / 请说明你想搞清楚什么，或者你想做什么。
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: What you already checked / 你已经看过什么
+      description: Mention docs, files, or experiments you already looked at. / 请说明你已经查看过哪些文档、文件或实验结果。
+  - type: textarea
+    id: context
+    attributes:
+      label: Extra context / 补充上下文
+      description: Add logs, sketches, assumptions, or constraints if helpful. / 如果有帮助，可以附上日志、草图、假设或约束条件。

@@ -1,0 +1,61 @@
+name: Bug Report / Bug 反馈
+description: Report a reproducible issue in a documented ManipPilot workflow. / 反馈一个在文档工作流中可复现的问题。
+title: "[Bug]: "
+labels:
+  - bug
+  - triage
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area / 影响范围
+      description: Which user-facing area is affected most? / 问题主要影响哪个面向用户的部分？
+      options:
+        - Installation / Setup (安装 / 环境准备)
+        - Task Definition (任务定义)
+        - Task Execution (任务执行)
+        - Replay / Review (回放 / 复盘)
+        - Recovery Behavior (恢复行为)
+        - ROS 2 Integration (ROS 2 集成)
+        - Documentation (文档)
+        - Repository Tooling (仓库工具)
+    validations:
+      required: true
+  - type: input
+    id: command
+    attributes:
+      label: Command or entry point / 使用的命令或入口
+      description: Which command, scenario, or public entry point were you using? / 你当时使用的是哪个命令、场景或公开入口？
+      placeholder: manippilot run ..., docs page, example task, etc.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary / 问题摘要
+      description: What is going wrong? / 现在具体出现了什么问题？
+      placeholder: Describe the bug clearly and concretely. / 请清楚、具体地描述问题。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / 复现步骤
+      description: List the steps or setup needed to reproduce the issue. / 请列出复现所需步骤或环境。
+      placeholder: |
+        1. Go to ...
+        2. Run ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior / 预期行为
+      description: What did you expect to happen? / 你原本预期应该发生什么？
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Logs, images, or extra context / 日志、图片或补充上下文
+      description: Paste logs, add screenshots, or describe the environment and scenario. / 可附上日志、截图，或补充说明环境与使用场景。
+      render: shell

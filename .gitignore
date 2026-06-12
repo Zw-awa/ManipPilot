@@ -1,0 +1,25 @@
+# Test output
+test-results/
+test-output/
+
+# Local development configs
+local.config.json
+dev.config.json
+
+# ROS 2 / colcon workspace output
+build/
+install/
+log/
+.colcon/
+
+# Python caches
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+
+_site/
+.jekyll-cache/
+.sass-cache/
+
+.tmp*
+_site*
